@@ -1,0 +1,144 @@
+<div class="Loginfooter">
+  <h2 class="auth-header"> Register In Lead Management</h2>
+</div>
+<br/>
+<div class="app flex-row align-items-center" ng-controller="registerController">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mx-4">
+          <div class="card-body p-4">
+            <h4>Register</h4>
+            <p class="text-muted">Create your account</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+              </div> Select Type
+              <input type="radio" ng-model="type" value="EventManager"> Event Manager
+              <input type="radio" ng-model="type" value="Individual"> Individual
+              
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="icon-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" ng-model="firstName" placeholder="Fisrt Name">
+            </div>
+            <p ng-show="errorName" style="color:red;background-color:gainsboro;font-size: large;"> Plz Enter Name</p>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="icon-user"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" ng-model="lastName" placeholder="Last Name">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-mobile"></i>
+                </span>
+              </div>
+              <input type="text" ng-required="true" ng-pattern="/^\+?\d{10}$/" class="form-control" ng-model="mobileNum" placeholder="Mobile Number">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input type="text" class="form-control" ng-model="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-required="true"
+                placeholder="Email">
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="icon-lock"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" ng-model="pwd" placeholder="Password">
+            </div>
+
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="icon-lock"></i>
+                </span>
+              </div>
+              <input type="password" class="form-control" ng-model="repwd" placeholder="Repeat password">
+            </div>
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="icon-lock"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" ng-model="address" placeholder="Enter Address">
+            </div>
+            <!-- <div class="input-group mb-3">
+                <div class="input-group-prepend" >
+                 Select Type
+                <input type="radio" ng-model="referBy" ng-click="unSetReferral()" value="Self"> Self
+                <input type="radio" ng-model="referBy" ng-click="setReferral()" value="Referral">   Referral     
+              </div>     
+              </div>
+
+              <div  class="input-group mb-3" ng-show="referValue">
+ 
+                  <input type="text" class="form-control" ng-model="referPerson" placeholder="Enter Reffered By">
+                </div>
+                
+
+              <div  class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      Priority
+                  </div> 
+                  <select style="width:  100%;height: 34px;">
+                      <option value=""></option>
+                      <option ng-model="hot"  value="Hot">Hot</option>
+                      <option ng-model="Cool" value="Cool">Cool</option>
+                    </select>
+                </div>
+                 -->
+
+            <button type="button" class="btn btn-block btn-success" ng-click="registerSubmite()">Create Account</button>
+            <p>Already Registered
+              <a ng-href={{loginUrl}}>Click Here</a>
+            </p>
+          </div>
+          <!-- <div class="card-footer p-4">
+            <div class="row">
+              <div class="col-6">
+                <button class="btn btn-block btn-facebook" type="button">
+                  <span>facebook</span>
+                </button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-block btn-twitter" type="button">
+                  <span>twitter</span>
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div growl></div>
+<div class="Loginfooter">
+  <h2> Welcome To Lead Management</h2>
+</div>
+<style>
+  .Loginfooter {
+    text-align: center;
+    background-color: #29363d;
+    height: 44px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .auth-header {
+    margin-top: 0px;
+  }
+</style>

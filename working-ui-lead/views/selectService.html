@@ -1,0 +1,35 @@
+<table class="modal-header">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Service Name</th>
+            <th>Service Price</th>
+        </tr>
+    </thead>
+    <tbody class="modal-body">
+        <tr ng-repeat="select in selectServices">
+            <td>
+                <input id="selectService_{{select.id}}" type="checkbox" ng-model="select.selected" />
+            </td>
+            <td>{{select.service_name}}</td>
+            <td>{{select.service_price}}</td>
+        </tr>
+    </tbody>
+    <tfoot class="modal-footer" ng-if="select.Selected">
+        <button class="btn btn-primary" ng-click="GetValue()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </tfoot>
+</table>
+<style>
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  </style>

@@ -1,0 +1,17 @@
+<div dragable>
+    <div class="modal-header  bg-primary">
+        <a type="button" class="btn modal-popup-header-close" ng-click="$close()"
+           id="subject-details"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <h5 class="modal-title modal-popup-header-label">Delete
+            {{vm.deleteItem}}</h5>
+    </div>
+    <div class="modal-body modal-body-emp-footer " align="center"><b>Are you sure you want to delete?</b></div>
+    <form role="form">
+        <label class="popup-err-msg"  data-ng-bind="ErrorMessage"></label>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-warning btn-sm" ng-click="$close()">Cancel</button>
+            <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" ng-click="vm.remove()">Delete
+            </button>
+        </div>
+    </form>
+</div>

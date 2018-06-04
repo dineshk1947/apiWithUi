@@ -1,0 +1,63 @@
+<div class="card-body">    
+    <div class="ui-grid-cell-contents">
+        <div class="row m-b-sm m-t-sm">
+
+            <div class="col-sm-offset-1 col-sm-7">
+                <input type="text" ng-model="searchterm" ng-minlength="1" placeholder="Search" id="search-table" autofocus ng-change="vm.searchGrid(searchterm)"
+                    class="input-sm form-control input-highlight my-challenge-menu">
+                <span class="input-group-btn"></span>
+            </div>
+            <div class="col-sm-1 text-right grid-downloads">
+                <button class="btn btn-xs pdf-download" ng-click="downloadPDF()">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-xs excel-download" ng-click="downloadCSV()">
+                    <i class="fa fa-file-excel-o" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-sm-1 col-xs-6" align="right">
+                <button class="btn btn-xs btn-primary pull-right emp-user2 grid-dropdown" ng-show="commonCreate" ng-click="addRow()">Add &nbsp;&nbsp;
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-xs btn-primary pull-right emp-user2 grid-dropdown" ng-show="leadCreate" ng-click="addLead()">Add &nbsp;&nbsp;
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="grid" ui-grid="vm.gridOptions" ui-grid-edit ui-grid-pagination="" ui-grid-move-columns 
+        ui-grid-resize-columns ui-grid-exporter  ></div>
+    </div>
+    <div ng-hide="commonGrid" align="center" class="grid-alert2 success">
+        <label>{{vm.detailedErrorMessage}}</label>
+    </div>
+    <!-- <div class="ibox-emp-content" data-z="0.5" id="grid-pagination">
+        <div class="row m-b-sm m-t-sm">
+            <div class="col-sm-4 col-md-4 hidden-xs">
+                <div role="status" aria-live="polite">Showing
+                    <b>{{vm.begin}}</b> to
+                    <b ng-if="vm.selectCountValue >= vm.gridOptions.totalItems">{{vm.gridOptions.totalItems}}</b>
+                    <b ng-if="vm.selectCountValue < vm.gridOptions.totalItems">{{vm.end}}</b>                    
+                    entries out of
+                    <b>{{vm.gridOptions.totalItems}}</b>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-8 col-xs-12" align="right">
+                <pagination total-items="vm.gridOptions.totalItems" ng-model="vm.gridOptions.paginationCurrentPage" max-size="2" boundary-links="true"
+                    first-text="&laquo;" last-text="&raquo;" next-text="&rsaquo;" previous-text="&lsaquo;" items-per-page="vm.gridOptions.paginationPageSize"
+                    class="pagination-sm"></pagination>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<style>
+    .grid-tooltip {
+        overflow: visible;
+        z-index: 99;
+        float: left;
+    }
+</style>

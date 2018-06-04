@@ -1,0 +1,25 @@
+{
+  "name": "shapes",
+  "version": "1.0.0",
+  "description": "Api For Shapes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hapi": "^17.2.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "redis": "^2.8.0"
+  },
+  "dependencies": {
+    "chakram": "^1.5.0",
+    "jsonwebtoken": "^8.2.0",
+    "md5": "^2.2.1",
+    "nodemailer": "^4.6.3"
+  }
+}

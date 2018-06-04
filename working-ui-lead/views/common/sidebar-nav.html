@@ -1,0 +1,21 @@
+<div class="sidebar" ng-controller="sidebarController">
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.main"><!--<i class="icon-speedometer"></i> --> Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ng-show="admin" ui-sref="app.components.employers"> Employers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ng-show="admin" ui-sref="app.components.services"> Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ui-sref="app.leads"> Leads</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref-active="active" ui-sref="appSimple.login" ng-click="logout()"> Sign Out</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <div class="modal-header bg-primary">
+            <a type="button" class="btn modal-popup-header-close" ng-click="$close()" id="subject-details">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+            <h5 class="modal-title modal-popup-header-label">
+                {{vm.popupHeader}} Details</h5>
+        </div>
+        <div class="modal-body">
+            <label id="catlbl" data-ng-bind="AddErrorMessage"></label>
+            <form id="largeform" name="ngForm" data-ng-submit="submitForm(ngForm,vm.entity)">
+                <div sf-schema="vm.schema" sf-form="vm.form" sf-model="vm.entity" sf-options="{validtionMessage: {302: 'Please Enter Value'}}"></div>            
+            </form>
+        </div>
+    </div>
+</div>

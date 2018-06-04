@@ -1,0 +1,37 @@
+<div >
+    <div >
+        <div class="modal-header bg-primary">
+            <a type="button" class="btn modal-popup-header-close" ng-click="$close()" id="subject-details">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+            <h5 class="modal-title modal-popup-header-label">
+                {{vm.popupHeader}} Details</h5>
+        </div>
+        <div class="modal-body">
+            <label id="catlbl" data-ng-bind="AddErrorMessage"></label>
+            <form id="largeform" name="ngForm" data-ng-submit="submitForm(ngForm,vm.entity)">
+                <div sf-schema="vm.schema" sf-form="vm.form" sf-model="vm.entity" sf-options="{validtionMessage: {302: 'Please Enter Value'}}"></div>
+                <div class="text-right">
+                    <button type="button" class="btn btn-warning btn-sm" ng-click="$close()">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm" value="save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.modal-content').resizable({
+      //alsoResize: ".modal-dialog",
+      minHeight: 300,
+      minWidth: 300
+    });
+    $('.modal-dialog').draggable();
+
+    $('#myModal').on('show.bs.modal', function() {
+      $(this).find('.modal-body').css({
+        'max-height': '100%'
+      });
+    });
+  </script>
+  
